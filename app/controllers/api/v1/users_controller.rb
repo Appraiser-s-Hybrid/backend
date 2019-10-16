@@ -77,3 +77,5 @@ module Api
           params.require(:user).permit(:email, :password)
         end
     end
+  end
+end
