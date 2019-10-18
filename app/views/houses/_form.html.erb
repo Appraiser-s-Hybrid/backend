@@ -1,0 +1,132 @@
+<%= form_with(model: house, local: true) do |form| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+        <% house.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :airconType %>
+    <%= form.text_field :airconType %>
+  </div>
+
+  <div class="field">
+    <%= form.label :homeSqFt %>
+    <%= form.text_field :homeSqFt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :basementSqFt %>
+    <%= form.text_field :basementSqFt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bathroomCount %>
+    <%= form.number_field :bathroomCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bedroomCount %>
+    <%= form.number_field :bedroomCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buildingQualityType %>
+    <%= form.text_field :buildingQualityType %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buildingClass %>
+    <%= form.text_field :buildingClass %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fireplace %>
+    <%= form.text_field :fireplace %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garageCarCount %>
+    <%= form.number_field :garageCarCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garageSqFt %>
+    <%= form.number_field :garageSqFt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.number_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.number_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.number_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :poolCount %>
+    <%= form.number_field :poolCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :poolSize %>
+    <%= form.number_field :poolSize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :county %>
+    <%= form.text_field :county %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :yearBuilt %>
+    <%= form.text_field :yearBuilt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :roomCount %>
+    <%= form.number_field :roomCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastSellPrice %>
+    <%= form.number_field :lastSellPrice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Houses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Aircontype</th>
+      <th>Homesqft</th>
+      <th>Basementsqft</th>
+      <th>Bathroomcount</th>
+      <th>Bedroomcount</th>
+      <th>Buildingqualitytype</th>
+      <th>Buildingclass</th>
+      <th>Fireplace</th>
+      <th>Garagecarcount</th>
+      <th>Garagesqft</th>
+      <th>Zipcode</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Poolcount</th>
+      <th>Poolsize</th>
+      <th>City</th>
+      <th>County</th>
+      <th>State</th>
+      <th>Yearbuilt</th>
+      <th>Roomcount</th>
+      <th>Lastsellprice</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.price %></td>
+        <td><%= house.airconType %></td>
+        <td><%= house.homeSqFt %></td>
+        <td><%= house.basementSqFt %></td>
+        <td><%= house.bathroomCount %></td>
+        <td><%= house.bedroomCount %></td>
+        <td><%= house.buildingQualityType %></td>
+        <td><%= house.buildingClass %></td>
+        <td><%= house.fireplace %></td>
+        <td><%= house.garageCarCount %></td>
+        <td><%= house.garageSqFt %></td>
+        <td><%= house.zipcode %></td>
+        <td><%= house.latitude %></td>
+        <td><%= house.longitude %></td>
+        <td><%= house.poolCount %></td>
+        <td><%= house.poolSize %></td>
+        <td><%= house.city %></td>
+        <td><%= house.county %></td>
+        <td><%= house.state %></td>
+        <td><%= house.yearBuilt %></td>
+        <td><%= house.roomCount %></td>
+        <td><%= house.lastSellPrice %></td>
+        <td><%= house.user_id %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New House', new_house_path %>
