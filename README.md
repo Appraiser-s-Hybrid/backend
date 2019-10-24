@@ -30,13 +30,17 @@ https://hidden-chamber-84113.herokuapp.com/api/v1/houses/:id
 
 #### Table information for houses
 
+Data from the DS FLASK app to be POSTED to the backend
 
-    integer price *Required
+    integer results *Required
+    integer bathroomcnt
+    integer bedroomcnt
+
+Other fields that can be saved to better the users experience
+
     string airconType
     string homeSqFt
     string basementSqFt
-    integer bathroomCount
-    integer bedroomCount
     string buildingQualityType
     string buildingClass
     boolean fireplace

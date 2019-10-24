@@ -1,16 +1,16 @@
 class CreateHouses < ActiveRecord::Migration[6.0]
   def change
     create_table :houses do |t|
-      t.integer :price
+      t.integer :results #this is the price (in $) data I am changing it to results to mach what the DS app says
       t.string :airconType
       t.string :homeSqFt
-      t.string :basementSqFt
-      t.integer :bathroomCount
-      t.integer :bedroomCount
+      t.string :basementSqFt 
+      t.integer :bathroomcnt # produced via DS app POSTED from our front end
+      t.integer :bedroomcnt # produced via DS app POSTED from our front end
       t.string :buildingQualityType
       t.string :buildingClass
       t.boolean :fireplace
-      t.integer :garageCarCount
+      t.integer :garageCarCnt
       t.integer :garageSqFt
       t.integer :zipcode
       t.integer :latitude
