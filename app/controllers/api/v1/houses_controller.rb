@@ -63,7 +63,7 @@ module Api
 
         # Never trust parameters from the scary internet, only allow the white list through.
         def house_params
-          params.require(:house).permit(:price, :airconType, :homeSqFt, :basementSqFt, :bathroomCount, :bedroomCount, :buildingQualityType, :buildingClass, :fireplace, :garageCarCount, :garageSqFt, :zipcode, :latitude, :longitude, :poolCount, :poolSize, :city, :county, :state, :yearBuilt, :roomCount, :lastSellPrice, :user_id)
+          params.require(:house).permit(:results, :airconType, :homeSqFt, :basementSqFt, :bathroomcnt, :bedroomcnt, :buildingQualityType, :buildingClass, :fireplace, :garageCarCount, :garageSqFt, :zipcode, :latitude, :longitude, :poolCount, :poolSize, :city, :county, :state, :yearBuilt, :roomCount, :lastSellPrice, :user_id)
         end
     end
   end
